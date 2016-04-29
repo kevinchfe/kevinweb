@@ -5,7 +5,8 @@
         <div class="col-lg-8">
             @if(!empty($article))
                 <div class="article-detail">
-                    <div class="article-date">2016<br>02-18</div>
+                    <div class="article-date">{{ $article->created_at->format('Y') }}
+                        <br> {{ $article->created_at->format('m-d') }}</div>
                     <div class="article-title">
                         <h1>{{ $article->title }}</h1>
                     </div>

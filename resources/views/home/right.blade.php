@@ -5,7 +5,7 @@
             <div>
                 <ul class="title-list">
                     @foreach($newArticles as $newArticle)
-                        <li><a href="">{{ $newArticle->title }}</a></li>
+                        <li><a href="{{ action('ArticleController@show',['id'=>$newArticle->id]) }}">{{ $newArticle->title }}</a></li>
                     @endforeach
                 </ul>
             </div>
