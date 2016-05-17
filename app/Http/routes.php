@@ -23,6 +23,7 @@ Route::group(['prefix'=>'backend','middleware'=>'auth'], function(){
     Route::resource('/user','backend\UserController');
     Route::get('/content','backend\ContentController@index');
     Route::resource('/article','backend\ArticleController');
+    Route::resource('/cate','backend\CateController');
 });
 Route::get('/auth/login','Auth\AuthController@getLogin');
 Route::post('/auth/login','Auth\AuthController@postLogin');

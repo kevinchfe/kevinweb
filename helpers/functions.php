@@ -22,7 +22,7 @@ if (!function_exists('tree')) {
     function tree($model, $parentId = 0, $level = 0, $html = '-') {
         $data = array();
         foreach ($model as $K => $v) {
-            if ($v->parentId == $parentId) {
+            if ($v->parent_id == $parentId) {
                 if ($level != 0) {
                     $v->html = str_repeat('&nbsp;&nbsp;&nbsp;&nbsp;', $level);
                     $v->html .= "|";

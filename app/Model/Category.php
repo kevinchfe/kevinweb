@@ -11,6 +11,12 @@ class Category extends Model
         0 => '顶级分类',
     ];
 
+    protected $fillable = [
+        'parent_id',
+        'cate_name',
+    ];
+
+    public $html;
     /**
      * 根据分类id查找分类名称
      * @param $catId
