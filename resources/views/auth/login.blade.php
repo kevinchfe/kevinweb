@@ -37,7 +37,7 @@
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">登录</button>
-                                <a href="" class="btn btn-link">忘记密码?</a>
+                                <a href="{{ url('password/email') }}" class="btn btn-link">忘记密码?</a>
                             </div>
                         </div>
 

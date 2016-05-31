@@ -27,3 +27,10 @@ Route::group(['prefix'=>'backend','middleware'=>'auth'], function(){
 });
 Route::get('/auth/login','Auth\AuthController@getLogin');
 Route::post('/auth/login','Auth\AuthController@postLogin');
+
+//重置密码
+Route::get('/password/email','Auth\PasswordController@getEmail');
+Route::post('/password/email','Auth\PasswordController@postEmail');
+
+Route::get('/password/reset','Auth\PasswordController@getReset');
+Route::post('/password/reset','Auth\PasswordController@postReset');
