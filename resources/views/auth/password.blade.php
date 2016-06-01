@@ -11,6 +11,8 @@
                         <form action="{{ url('/password/email') }}" method="post" class="form-horizontal" role="form">
 
                             {!! csrf_field() !!}
+
+
                             <div class="form-group">
                                 <label class="control-label col-md-4">邮箱</label>
                                 <div class="col-md-6">
@@ -18,8 +20,8 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                   <div class="col-md-6 col-md-offset-4">
-                                    <button type="submit">发送邮件</button>
+                                <div class="col-md-6 col-md-offset-4">
+                                    <button type="submit">发送邮件重置密码</button>
                                 </div>
                             </div>
 

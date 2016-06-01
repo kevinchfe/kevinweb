@@ -62,7 +62,7 @@ trait ResetsPasswords
      * @return \Illuminate\Http\Response
      */
     public function getReset($token = null)
-    {dd(1);
+    {
         if (is_null($token)) {
             throw new NotFoundHttpException;
         }
