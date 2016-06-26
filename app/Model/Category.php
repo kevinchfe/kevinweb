@@ -53,4 +53,15 @@ class Category extends Model
         return $data;
     }
 
+
+    /**
+     * 获取顶级分类列表
+     * @return mixed
+     */
+    public static function getFirstLevelCategory()
+    {
+        $category = self::where('parent_id',0)->get();
+        return $category;
+    }
+
 }

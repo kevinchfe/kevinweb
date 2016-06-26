@@ -14,8 +14,6 @@
                     <div class="article-content">
                         {!! conversionMarkdown($article->content) !!}
                     </div>
-
-
                 </div>
             @endif
         </div>

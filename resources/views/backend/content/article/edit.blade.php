@@ -26,7 +26,7 @@
                     <div class="col-md-6">
                         <div class="editor">
                             @include('editor::head')
-                            {!! Form::textarea('content','', ['class' => 'form-control','id'=>'myEditor']) !!}
+                            {!! Form::textarea('content',$article->content, ['class' => 'form-control','id'=>'myEditor']) !!}
                         </div>
                     </div>
                 </div>

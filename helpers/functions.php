@@ -11,7 +11,18 @@ if (!function_exists('viewInit')) {
      */
     function viewInit(){
         $articles = app('App\Model\Article');
+        $cates    = app('App\Model\Category');
+
+        /*-------------- 李潘潘 ---------------*/
+        $start = strtotime('2016-05-15 12:00:00');
+        $end   = time();
+        $days  = round(($end - $start)/86400+1);
+        view()->share('days',$days);
+        /*-------------- 李潘潘 ---------------*/
+
+        //dd($cates::getFirstLevelCategory());
         view()->share('newArticles',$articles::getNewArticle());
+        view()->share('cates',$cates::getFirstLevelCategory());
     }
 }
 
@@ -37,6 +48,9 @@ if (!function_exists('tree')) {
 }
 
 if(!function_exists('conversionMarkdown')){
+    /*
+     * markdown 语法转换
+     */
     function conversionMarkdown($markdownContent){
         $endaEditor = app('YuanChao\Editor\Facade\EndaEditorFacade');
         return !empty($endaEditor) ? $endaEditor::MarkDecode($markdownContent) : '';
