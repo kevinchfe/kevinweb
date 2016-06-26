@@ -20,6 +20,8 @@ class PasswordController extends Controller
 
     use ResetsPasswords;
 
+    protected $redirectTo = '/backend';//设置重置密码后跳转路径
+
     /**
      * Create a new password controller instance.
      *
